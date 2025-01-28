@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Vibe Checker</title>
+    <!-- Link to the CSS file -->
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
+</head>
+<body>
+    <div class="container">
+        <h1>Vibe Checker</h1>
+        <!-- Form for submitting text -->
+        <form method="POST">
+            <textarea name="text" placeholder="Enter text for a Vibe Check" required></textarea>
+            <button type="submit">Analyze</button>
+        </form>
+
+        {% if sentiment is defined %}
+        <div class="result">
+            <h2>Vibe: {{ sentiment }}</h2>
+        </div>
+        {% endif %}
+
+        {% if chart_path is defined %}
+        <div id="chart">
+            <img src="{{ chart_path }}" alt="Sentiment Chart">
+        </div>
+        {% endif %}
+    </div>
+
+    <!-- Link to the JavaScript file -->
+    <script src="{{ url_for('static', filename='js/script.js') }}"></script>
+</body>
+</html>
