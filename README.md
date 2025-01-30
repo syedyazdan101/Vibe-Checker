@@ -15,7 +15,7 @@ How to Run Locally:
 Clone this repository:
 
 1) download 
-git clone https://github.com/your-username/vibe-checker.git
+git clone https://github.com/syedyazdan101/vibe-checker.git
 
 2) open the vibe_checker file
 use "cd vibe_checker" in the terminal
